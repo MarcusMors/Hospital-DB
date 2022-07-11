@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+/*
+Authors:
+	* Gabriel Choque Mayta ,
+	* Jean Carlo Condori Gonzales,
+	* Geraldo Mark Romero Guillen ,
+	* José Enrique Vilca Campana <@marcusmors>
+Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Variables
+2.0 Typography
+3.0 Layout
+	3.1 Header
+	3.2 login Page
+	3.3 contact Page
+	3.5 patients Page
+	3.6 edit patient Page
+	3.7 users Page
+	3.8 Footer
+
+
+// inspiration
+2.0 Accessibility
+3.0 Alignments
+4.0 Clearings
+5.0 Typography
+6.0 Forms
+7.0 Formatting
+8.0 Lists
+9.0 Tables
+10.0 Links
+11.0 Featured Image Hover
+12.0 Navigation
+13.0 Layout
+	13.1 Header
+	13.2 Home Page
+	13.3 contact
+	13.4 Posts
+	13.5 Pages
+	13.6 Footer
+14.0 Comments
+15.0 Widgets
+16.0 Media
+16.1 Galleries
+17.0 Customizer
+18.0 SVGs Fallbacks
+19.0 Media Queries
+20.0 Print
+// inspiration
+
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+
+/* hexadecimal to svg color transformer: https://codepen.io/sosuke/full/Pjoqqp*/
+
+:root {
+	/* default palette*/
+	--dark-5-brown: #5995fd;
+	--dark-4-brown: #224353;
+	--cafe: #346e80;
+	--pink-mate: #4da6b4;
+	--piel: #73ebee;
+	/* responsive */
+	/*	mobile*/
+	--mobile-w: 360px;
+	--mobile-h: 640px;
+	/*	tablet*/
+	--tablet-w: 720px;
+	--tablet-h: 1024px;
+	/*	desktop*/
+	/*	idk what to do here*/
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+/* html {
+	font-size: 62.5%;
+} */
+h1 {
+	padding-bottom: 0.6rem;
+	padding-top: 0.4rem;
+	margin: 0;
+}
+h2 {
+	padding-bottom: 0.4rem;
+	padding-top: 0.2rem;
+	margin: 0;
+}
+h3 {
+	padding-bottom: 0.3rem;
+	padding-top: 0.1rem;
+	margin: 0;
+}
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+
+html {
+	min-height: 100vh;
+}
+/*
+body {
+	//height: 100vh;
+	min-height: var(--mobile-h);
+	display: flex;
+	flex-flow: column;
+} */
+
+/*--------------------------------------------------------------
+3.1 Header
+--------------------------------------------------------------*/
+header {
+	background-color: #fff;
+}
+
+body,
+input {
+	font-family: "Poppins", sans-serif;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	background-color: #fff;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.sign-in-form {
+	width: 100%;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0rem 2rem;
+	transition: all 0.2s 0.7s;
+	overflow: hidden;
+}
+.title {
+	font-size: 2.2rem;
+	color: #444;
+	margin-bottom: 10px;
+}
+.input-field {
+	max-width: 380px;
+	width: 100%;
+	background-color: #f0f0f0;
+	margin: 10px 0;
+	height: 55px;
+	border-radius: 55px;
+	display: grid;
+	grid-template-columns: 15% 85%;
+	padding: 0 0.4rem;
+	position: relative;
+}
+.input-field i {
+	text-align: center;
+	line-height: 55px;
+	color: #acacac;
+	transition: 0.5s;
+	font-size: 1.1rem;
+}
+.input-field input {
+	background: none;
+	outline: none;
+	border: none;
+	line-height: 1;
+	font-weight: 600;
+	font-size: 1.1rem;
+	color: #333;
+}
+.button {
+	width: 150px;
+	background-color: #5995fd;
+	border: none;
+	outline: none;
+	height: 49px;
+	border-radius: 49px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 10px 0;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.button:hover {
+	background-color: #4d84e2;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.5rem 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+nav .logo {
+	color: #4d84e2;
+	font-weight: 700;
+	font-size: 3rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+nav ul {
+	float: right;
+	justify-content: center;
+	align-items: center;
+}
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin-left: 20px;
+}
+nav ul li a {
+	text-decoration: none;
+	padding: 6px 15px; /*Este padding es para el background del texto*/
+	color: #4d84e2;
+	border-radius: 20px;
+}
+nav ul li a:hover {
+	color: #fff;
+	background: #4d84e2;
+}
+.button.header {
+	margin-left: 20px;
+	width: 110px;
+}
+
+.check-button {
+	font-size: 30px;
+	color: #4d84e2;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
+}
+
+@media (max-width: 858px) {
+	.button.header {
+		margin-left: 0px;
+	}
+	.check-button {
+		display: block;
+	}
+	ul {
+		position: fixed;
+		width: 50%;
+		height: 100vh;
+		background: linear-gradient(#fff, #5995fd);
+		top: 120px;
+		left: -100%;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	nav ul li {
+		display: block;
+		margin: 20px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+
+	#check:checked ~ ul {
+		left: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+3.2 Home Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+3.3 contact
+--------------------------------------------------------------*/
+
+main {
+	/* min-height: 85vh; */
+	background: linear-gradient(#fff, #5995fd);
+	min-height: 100vh;
+	/* display: flex;
+	align-items: center; */
+}
+
+main .cover__container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+main .cover__container .img__svg-cover {
+	max-height: 100vh;
+	max-width: 80vw;
+}
+/*--------------------------------------------------------------
+3.5 patients
+--------------------------------------------------------------*/
+
+/* PATIENTS */
+.container-fluid {
+	background: linear-gradient(#fff, #5995fd);
+	height: 100vh;
+}
+#table-patients {
+	margin: 10px 0px 0px 30px;
+}
+
+.input-field.input-pat {
+	height: 50px;
+	border-radius: 20px;
+	grid-template-columns: 100%;
+}
+
+.button.btn-pat {
+	border-radius: 20px;
+	background-color: red;
+}
+
+.input-field.input-pat.five {
+	background-color: #fff;
+	margin-top: 150px;
+	margin-bottom: 0;
+	flex-direction: row;
+	min-height: 200px;
+	grid-template-rows: 16.5% 16.5% 16.5% 16.5% 16.5%;
+	max-width: 600px;
+}
+.input-field.input-pat.five input {
+	max-width: 600px;
+	padding: 20px;
+}
+.container.pat {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button.btn-pat.pat {
+	font-size: 2rem;
+}
+#table-patients {
+	max-width: 60%;
+}
+.birthday {
+	max-width: 40px;
+}
+/*--------------------------------------------------------------
+3.8 Footer
+--------------------------------------------------------------*/
+footer {
+	/* margin-top: auto; */
+	width: auto;
+	height: 15vh;
+	min-height: 96px;
+	background-color: var(--dark-5-brown);
+	margin-top: auto;
+}
+
+.footer-cont {
+	height: 15vh;
+	width: 80vw;
+	min-width: var(--mobile-w);
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.contact-cont {
+	width: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.contact__tittle-cont {
+	height: 10rem;
+	color: white;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer__contact-tittle-cont *:hover {
+	color: #bbb;
+}
+.contact__icons-cont {
+	padding-left: 2px;
+	padding-right: 2px;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+footer .img__svg-icon {
+	height: 1vh;
+	color: black;
+	min-height: 40px;
+	filter: invert(27%) sepia(43%) saturate(774%) hue-rotate(126deg)
+		brightness(98%) contrast(95%);
+}
+footer .img__svg-icon:hover {
+	/* filter: invert(46%) sepia(99%) saturate(1755%) hue-rotate(199deg)
+		brightness(94%) contrast(87%); */
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+		brightness(102%) contrast(102%);
+}
+
+/* PATIENTS */
+.container-fluid {
+	background: linear-gradient(#fff, #5995fd);
+	height: 100vh;
+}
+#table-patients {
+	margin: 10px 0px 0px 30px;
+}
+
+.input-field.input-pat{
+	height: 50px;
+	border-radius: 20px;
+	grid-template-columns: 100%;
+}
+
+.button.btn-pat {
+	border-radius: 20px;
+	background-color: red;
+}
+
+.input-field.input-pat.five{
+	background-color:transparent;
+	margin-top: 0;
+	flex-direction: row;
+	min-height: 200px;
+	grid-template-rows: 16.5% 16.5% 16.5% 16.5% 16.5%;
+	max-width: 600px;
+}
+.input-field.input-pat.five input {
+	max-width: 100%;
+	height: auto;
+	padding: 20px;
+	margin: 10px;
+}
+.container.pat {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#table-patients {
+	max-width: 100%;
+}
+.birthday {
+	max-width: 40px;
+}
+.containear{
+	margin-top:125px;
+	display:flex;
+
+}

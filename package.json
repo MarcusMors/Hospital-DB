@@ -1,0 +1,33 @@
+{
+	"name": "persistence-laboratory-504-error",
+	"version": "1.0.0",
+	"description": "Grade: -",
+	"main": "index.js",
+	"scripts": {
+		"start": "node src",
+		"dev": "nodemon src"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/UCSP-CS2B1/persistence-laboratory-504-error.git"
+	},
+	"keywords": [],
+	"author": "José Vilca Campana <@marcusmors> <alivezeh@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/UCSP-CS2B1/persistence-laboratory-504-error/issues"
+	},
+	"homepage": "https://github.com/UCSP-CS2B1/persistence-laboratory-504-error#readme",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"express-myconnection": "^1.0.4",
+		"morgan": "^1.10.0",
+		"mysql": "^2.18.1",
+		"pg": "^8.6.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	}
+}
