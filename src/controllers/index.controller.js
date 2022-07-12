@@ -1,6 +1,20 @@
 "use strict"
 
-import { Pool } from "pg"
+const { json, response } = require("express")
+const { Pool, Connection } = require("pg")
+
+// const mysql = require("mysql")
+// const connection = mysql.createConnection({
+// 	host: "localhost",
+// 	user: "user",
+// 	password: "p@ssw0rd2020ya",
+// 	database: "hospital",
+// })
+
+connection.connect((err) => {
+	if (err) throw err
+	console.log("Connected to MySQL Server!")
+})
 
 const pool = new Pool({
 	host: "localhost",
@@ -72,7 +86,7 @@ const deleteUser = async (req, res) => {
 	res.redirect("/patients")
 }
 
-export default {
+module.exports = {
 	singUser,
 	compareMsg,
 	mainPage,

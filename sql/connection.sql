@@ -1,15 +1,11 @@
--- @block to change the password
-ALTER USER postgres PASSWORD 'p@ssw0rd2020ya';
--- @block Init Data
-CREATE DATABASE hospital;
 -- enter the data base
 \ c hospital -- @block Init Data
 CREATE TABLE "access" (
-  id SERIAL PRIMARY KEY,
-  doctor_id INTEGER,
-  username VARCHAR(30),
-  password TEXT,
-  role VARCHAR(30)
+    id SERIAL PRIMARY KEY,
+    doctor_id INTEGER,
+    username VARCHAR(30),
+    password TEXT,
+    role VARCHAR(30)
 );
 -- @block Insert Data
 INSERT INTO access (doctor_id, username, password, role)
@@ -21,12 +17,12 @@ SELECT *
 FROM "access";
 -- @block Create Table
 CREATE TABLE patients (
-  id SERIAL PRIMARY KEY,
-  doctor_id INTEGER,
-  name VARCHAR(30),
-  age INTEGER,
-  birthday DATE,
-  phone INTEGER
+    id SERIAL PRIMARY KEY,
+    doctor_id INTEGER,
+    name VARCHAR(30),
+    age INTEGER,
+    birthday DATE,
+    phone INTEGER
 );
 SELECT *
 FROM "patients";
