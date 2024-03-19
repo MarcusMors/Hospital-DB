@@ -3,7 +3,9 @@ ALTER USER postgres PASSWORD 'p@ssw0rd2020ya';
 -- @block Init Data
 CREATE DATABASE hospital;
 -- enter the data base
-\ c hospital -- @block Init Data
+\ c hospital
+/* */
+-- @block Init Data
 CREATE TABLE "access" (
   id SERIAL PRIMARY KEY,
   doctor_id INTEGER,
